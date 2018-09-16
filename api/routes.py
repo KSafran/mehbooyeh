@@ -13,14 +13,35 @@ def add_boop():
         reg = mehbooyeh(form.name.data, form.mby.data)
         db.session.add(reg)
         db.session.commit()
-        meh_id = reg.id
-        return redirect('/meh/' + str(meh_id))
+        vote_id = reg.id
+        return redirect('/vote/' + str(vote_id))
     return render_template('index.html', form = form)
 
-@BLUEPRINT.route('/meh/<meh_id>', methods=['GET','POST'])
-def meh_id(meh_id):
+@BLUEPRINT.route('/vote/<vote_id>', methods=['GET','POST'])
+def vote_id(vote_id):
 
-    meh = db.session.query(mehbooyeh).filter(mehbooyeh.id == meh_id).first()
+    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
     return render_template('mehbooyeh.html',
-                           name=meh.name, item=meh.item,
-                           mehs=meh.mehs, boos=meh.boos, yehs=meh.yehs)
+                           name=vote.name, item=vote.item, vote_id=vote_id,
+                           mehs=vote.mehs, boos=vote.boos, yehs=vote.yehs)
+
+@BLUEPRINT.route('/meh/<vote_id>', methods=['GET','POST'])
+def meh(vote_id):
+    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
+    vote.mehs += 1
+    db.session.commit()
+    return redirect('/vote/' + str(vote_id))
+
+@BLUEPRINT.route('/boo/<vote_id>', methods=['GET','POST'])
+def boo(vote_id):
+    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
+    vote.boos += 1
+    db.session.commit()
+    return redirect('/vote/' + str(vote_id))
+
+@BLUEPRINT.route('/yeh/<vote_id>', methods=['GET','POST'])
+def yeh(vote_id):
+    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
+    vote.yehs += 1
+    db.session.commit()
+    return redirect('/vote/' + str(vote_id))
