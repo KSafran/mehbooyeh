@@ -18,14 +18,15 @@ h1 {
   color:#BBDEFB;
 }
 p {
-  font-family: 'Andada', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size:25px;
 }
 
 
 
 
 .lead {
-    font-family: 'Andada', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color:#BBDEFB;
     text-align: center;
 }
