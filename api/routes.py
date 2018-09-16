@@ -5,7 +5,6 @@ from .forms import MBYForm
 
 BLUEPRINT = Blueprint("BLUEPRINT", __name__)
 
-
 @BLUEPRINT.route("/", methods=['GET', 'POST'])
 def add_boop():
     form = MBYForm(request.form)
