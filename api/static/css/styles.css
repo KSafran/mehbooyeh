@@ -17,25 +17,40 @@ h1 {
   text-align: center;
   color:#BBDEFB;
 }
+
 p {
   font-family: 'Roboto', sans-serif;
   font-size:25px;
 }
 
 
+.voting_buttons {
+  margin: 0 auto;
+  display:table;
+}
 
+.single_button {
+  display:table-cell;
+}
 
 .lead {
     font-family: 'Roboto', sans-serif;
     color:#BBDEFB;
     text-align: center;
 }
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #BBDEFB;
     opacity: 1; /* Firefox */
 }
 
-input {
+.index_form{
+  text-align: center;
+}
+.text_input{
+ position: relative;
+ max-width: 400px;
+ margin: 30px auto 0;
  border: 0;
  border-bottom: 2px solid #1976D2;
  width: 100%;
@@ -44,27 +59,38 @@ input {
  height: 70px;
  text-align: center;
  padding: 10px;
- background: #1288E5;
+ background: transparent;
   color: #BBDEFB;
 }
+
 .button_holder{
   text-align: center;
 }
+
 .button_boi{
-  display:inline-block;
+  width: 10em;  height: 5em;
+  line-height: 35px;
   text-align: center;
-  margin:0 auto;
-}
-input[type="submit"]{
- border: 0;
- width: 20%;
- font-size: 30px;
- line-height: 35px;
- height: 70px;
- text-align: center;
- padding: 10px;
- background: #333;
+  background: #333;
   color: #BBDEFB;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.vote_button{
+  width: 10em;  height: 5em;
+  line-height: 35px;
+  text-align: center;
+  background: #333;
+  color: #BBDEFB;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 /* Custom container */

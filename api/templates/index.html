@@ -17,18 +17,18 @@
 
     <div class="row">
         <div class="col-lg-12 text-center v-center">
-            <h1>Meh Boo Yay</h1>
+            <h1>Meh Boo Yeh</h1>
             <p class="lead">Enter your name and poll subject to start your Meh Boo Yeh poll</p>
             <br>
             <br>
             <br>
-            <form class="col-lg-12" action="{{url_for('BLUEPRINT.add_boop')}}" method="POST">
+            <form class="index_form" action="{{url_for('BLUEPRINT.add_boop')}}" method="POST">
             {{form.hidden_tag()}}
-            {{form.name(placeholder='Name')}}<br>
-            {{form.mby(placeholder='Poll Subject')}}<br>
+            {{form.name(class_="text_input", placeholder='Name')}}<br>
+            {{form.mby(class_="text_input", placeholder='Poll Subject')}}<br>
             <br>
             <div class="botton_holder" style="text-align:center;">
-                <input class=button_boi" type="submit">
+                <input class="button_boi" type="submit">
             </div>
             </form>
         </div>
