@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
 
+#index {
+    height: 100%;
+}
+
 html,body {
+  position: fixed;
   height:100%;
   margin: 0 auto;
   width: 100%;
   min-height:100%;
   background-color: #2196F3;
   color:#BBDEFB;
-  overflow:hidden;
+  overflow:scroll;
+}
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 h1 {
