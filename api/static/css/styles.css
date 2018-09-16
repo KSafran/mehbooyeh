@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
 
-#index {
-    height: 100%;
-}
-
 html,body {
   position: fixed;
   height:100%;
@@ -24,36 +20,51 @@ h1 {
   color:#BBDEFB;
 }
 
-p {
+/*p {
   font-family: 'Roboto', sans-serif;
   font-size:2em;
-}
+}*/
 
-
+/*Lines up voting buttons on one line*/
 .voting_buttons {
+  width: 50%;
   margin: 0 auto;
-  display:table;
+  text-align: center;
 }
-
 .single_button {
-  display:table-cell;
+  text-align: center;
+  display:inline-block;
+}
+.vote_button{
+  text-align: center;
+}
+.vote_button_forms{
+  text-align: center;
+  margin: 10px;
+}
+.vote_button_div{
+  text-align:center;
 }
 
+/*Formats paragraph text*/
 .lead {
     font-family: 'Roboto', sans-serif;
     color:#BBDEFB;
     text-align: center;
 }
 
+/*Colors the form placeholder text*/
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #BBDEFB;
     opacity: 1; /* Firefox */
 }
 
+/*Centers form fields*/
 .index_form{
   text-align: center;
 }
 
+/*Formats text input fields*/
 .text_input{
  position: relative;
  max-width: 400px;
@@ -70,10 +81,12 @@ p {
   color: #BBDEFB;
 }
 
+/*Centers submit button*/
 .button_holder{
   text-align: center;
 }
 
+/*Formats submit button*/
 .button_boi{
   width: 10em;  height: 5em;
   line-height: 35px;
@@ -86,6 +99,11 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
+
+/*.single_button{
+   margin:10px;
+}*/
+/*formats vote button*/
 
 .vote_button{
   width: 10em;  height: 5em;
@@ -118,7 +136,7 @@ p {
 }
 
 /* Custom container */
-.container-full {
+/*.container-full {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
@@ -126,20 +144,23 @@ p {
   color:#BBDEFB;
  /* overflow:scroll;
  /* -webkit-overflow-scrolling: touch*/
-}
-
+/*}*/
+/*
 .container-full a {
   color:#FFF;
   text-decoration:none;
 }
-
-.v-center {
+*/
+/*.v-center {
   margin-top:7%;
 }
+*/
 
+/*Centers create button*/
 .create_holder{
   text-align: center;
 }
+/*Styles create button*/
 #create {
   width: 12em;  height: 3em;
   text-align: center;

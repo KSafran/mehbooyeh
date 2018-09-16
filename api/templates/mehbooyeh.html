@@ -25,25 +25,25 @@
                 <br>
                 <br>
                 <div class="voting_buttons">
-                    <div class="single_button">
-                        <form class="col-lg-12", action="{{url_for('BLUEPRINT.meh', vote_id=vote_id)}}" method="POST">
-                            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                    <div class="single_button" id="meh">
+                        <form class="vote_button_forms", action="{{url_for('BLUEPRINT.meh', vote_id=vote_id)}}" method="POST">
+                            <div class="vote_button_div">
                                 <input class="vote_button" type="submit" id="meh" value="Meh">
                                 <p>{{mehs}}</p>
                             </div>
                         </form>
                     </div>
-                    <div class="single_button">
-                        <form class="col-lg-12", action="{{url_for('BLUEPRINT.boo', vote_id=vote_id)}}" method="POST">
-                            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                    <div class="single_button" id="boo">
+                        <form class="vote_button_forms", action="{{url_for('BLUEPRINT.boo', vote_id=vote_id)}}" method="POST">
+                            <div class="vote_button_div">
                                 <input class="vote_button" type="submit" id="boo" value="Boo">
                                 <p>{{boos}}</p>
                             </div>
                         </form>
                     </div>
-                    <div class="single_button">
-                        <form class="col-lg-12" action="{{url_for('BLUEPRINT.yeh', vote_id=vote_id)}}" method="POST">
-                            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                    <div class="single_button" id="yeh">
+                        <form class="vote_button_forms" action="{{url_for('BLUEPRINT.yeh', vote_id=vote_id)}}" method="POST">
+                            <div class="vote_button_div">
                                 <input class="vote_button" type="submit" id="yeh" value="Yeh">
                                 <p>{{yehs}}</p>
                             </div>
