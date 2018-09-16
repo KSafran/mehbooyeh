@@ -88,6 +88,7 @@ p {
   color: #BBDEFB;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
   border-radius: 40px;
+  border-color: #333;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -110,4 +111,18 @@ p {
 
 .v-center {
   margin-top:7%;
+}
+
+.create_holder{
+  text-align: center;
+}
+#create {
+  width: 12em;  height: 3em;
+  text-align: center;
+  background: #333;
+  color: #BBDEFB;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  font-size: 10px;
+  letter-spacing: 0.3px;
 }
