@@ -112,6 +112,7 @@ p {
   background-color: #2196F3;
   color:#BBDEFB;
   overflow:scroll;
+  -webkit-overflow-scrolling: touch
 }
 
 .container-full a {
