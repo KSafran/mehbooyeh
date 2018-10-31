@@ -24,23 +24,9 @@ def vote_id(vote_id):
                            name=vote.name, item=vote.item, vote_id=vote_id,
                            mehs=vote.mehs, boos=vote.boos, yehs=vote.yehs)
 
-@BLUEPRINT.route('/meh/<vote_id>', methods=['GET','POST'])
-def meh(vote_id):
+@BLUEPRINT.route('/<vote_type>/<vote_id>', methods=['GET','POST'])
+def tally_vote(vote_id):
     vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
-    vote.mehs += 1
-    db.session.commit()
-    return redirect('/vote/' + str(vote_id))
-
-@BLUEPRINT.route('/boo/<vote_id>', methods=['GET','POST'])
-def boo(vote_id):
-    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
-    vote.boos += 1
-    db.session.commit()
-    return redirect('/vote/' + str(vote_id))
-
-@BLUEPRINT.route('/yeh/<vote_id>', methods=['GET','POST'])
-def yeh(vote_id):
-    vote = db.session.query(mehbooyeh).filter(mehbooyeh.id == vote_id).first()
-    vote.yehs += 1
+    getattr(vote, vote_type) += 1
     db.session.commit()
     return redirect('/vote/' + str(vote_id))
