@@ -1,28 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
 
+/* COLORS */
+$primary: #2196F3;
+$secondary: #BBDEFB;
+$dark-gray: #333;
+
+
 html,body {
   position: fixed;
-  height:100%;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
   min-height:100%;
-  background-color: #2196F3;
-  color:#BBDEFB;
-  overflow-x:hidden;
-  overflow-y:scroll;
+  background-color: $primary;
+  color: $secondary;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
   font-size:4em;
   text-align: center;
-  color:#BBDEFB;
+  color: $secondary;
 }
 
 /*p {
   font-family: 'Roboto', sans-serif;
-  font-size:2em;
+  font-size: 2em;
 }*/
 
 /*Lines up voting buttons on one line*/
@@ -33,7 +42,7 @@ h1 {
 }
 .single_button {
   text-align: center;
-  display:inline-block;
+  display: inline-block;
 }
 .vote_button{
   text-align: center;
@@ -43,20 +52,19 @@ h1 {
   margin: 10px;
 }
 .vote_button_div{
-  text-align:center;
+  text-align: center;
 }
 
 /*Formats paragraph text*/
 .lead {
-    font-family: 'Roboto', sans-serif;
-    color:#BBDEFB;
-    text-align: center;
+  color: $secondary;
+  text-align: center;
 }
 
 /*Colors the form placeholder text*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #BBDEFB;
-    opacity: 1; /* Firefox */
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $secondary;
+  opacity: 1; /* Firefox */
 }
 
 /*Centers form fields*/
@@ -66,35 +74,36 @@ h1 {
 
 /*Formats text input fields*/
 .text_input{
- position: relative;
- max-width: 400px;
- margin: 30px auto 0;
- border: 0;
- border-bottom: 2px solid #1976D2;
- width: 100%;
- font-size: 30px;
- line-height: 35px;
- height: 70px;
- text-align: center;
- padding: 10px;
- background: transparent;
-  color: #BBDEFB;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 70px;
+  margin: 30px auto 0;
+  border: 0;
+  border-bottom: 2px solid #1976D2;
+  padding: 10px;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  background: transparent;
+  color: $secondary;
 }
 
 /*Centers submit button*/
-.button_holder{
+.button_holder {
   text-align: center;
 }
 
 /*Formats submit button*/
-.button_boi{
-  width: 10em;  height: 5em;
+.button_boi {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  width: 10em;
+  height: 5em;
+  border-radius: 40px;
   line-height: 35px;
   text-align: center;
-  background: #333;
-  color: #BBDEFB;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 40px;
+  background: $dark-gray;
+  color: $secondary;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -112,33 +121,35 @@ h1 {
 /*formats vote button*/
 
 .vote_button{
-  width: 10em;  height: 5em;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  width: 10em;
+  height: 5em;
+  border-color: $dark-gray;
+  border-radius: 40px;
   line-height: 35px;
   text-align: center;
-  background: #333;
-  color: #BBDEFB;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 40px;
-  border-color: #333;
+  background: $dark-gray;
+  color: $secondary;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
 
 @media only screen and (max-width: 600px) {
-    .vote_button {
-        width: 5em;  height: 3em;
-        line-height: 10px;
-        text-align: center;
-        background: #333;
-        color: #BBDEFB;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-        border-color: #333;
-        font-size: 6px;
-        text-transform: uppercase;
-        letter-spacing: 0.1px;
-    }
+  .vote_button {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    width: 5em;
+    height: 3em;
+    border-radius: 10px;
+    border-color: $dark-gray;
+    line-height: 10px;
+    text-align: center;
+    background: $dark-gray;
+    color: $secondary;
+    font-size: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+  }
 }
 
 /* Custom container */
@@ -146,8 +157,8 @@ h1 {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
-  background-color: #2196F3;
-  color:#BBDEFB;
+  background-color: $primary;
+  color: $secondary;
  /* overflow:scroll;
  /* -webkit-overflow-scrolling: touch*/
 /*}*/
@@ -166,14 +177,16 @@ h1 {
 .create_holder{
   text-align: center;
 }
+
 /*Styles create button*/
 #create {
-  width: 12em;  height: 3em;
-  text-align: center;
-  background: #333;
-  color: #BBDEFB;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+  width: 12em;
+  height: 3em;
   border-radius: 40px;
+  text-align: center;
+  background: $dark-gray;
+  color: $secondary;
   font-size: 10px;
   letter-spacing: 0.3px;
 }
