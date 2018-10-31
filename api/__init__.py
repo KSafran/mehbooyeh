@@ -19,7 +19,7 @@ def create_app():
 
     assets = Environment(app)
     assets.url = app.static_url_path
-    scss = Bundle('css/styles.scss', filters='pyscss', output='all.css')
+    scss = Bundle('css/styles.scss', filters='pyscss', output='css/dist.css')
     assets.register('scss_all', scss)
 
     return app
