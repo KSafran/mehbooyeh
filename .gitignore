@@ -2,3 +2,5 @@ venv/
 *.DS_Store
 *.pyc
 .env
+.webassets-cache
+dist.css
