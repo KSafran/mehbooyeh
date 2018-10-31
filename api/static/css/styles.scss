@@ -98,6 +98,12 @@ h1 {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  cursor: pointer;
+
+  &:hover {
+    background: #444;
+    transition: background 0.2s;
+  }
 }
 
 /*.single_button{
